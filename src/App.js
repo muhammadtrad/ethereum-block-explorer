@@ -32,7 +32,7 @@ function App() {
         block--;
       }
 
-      setAverageGasCost(ethers.utils.formatUnits(totalGasCost._hex) / 500);
+      setAverageGasCost(ethers.utils.formatEther(totalGasCost._hex) / 500);
     };
     fetchData();
     setBlockNumber(blockNumber);
