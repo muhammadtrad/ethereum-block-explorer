@@ -32,8 +32,7 @@ function App() {
         block--;
       }
 
-      const formatGasCost = ethers.BigNumber.from(totalGasCost._hex).toNumber();
-      setAverageGasCost(ethers.utils.formatEther(formatGasCost) / 500);
+      setAverageGasCost(ethers.utils.formatUnits(totalGasCost._hex) / 500);
     };
     fetchData();
     setBlockNumber(blockNumber);
